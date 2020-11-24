@@ -73,7 +73,7 @@
             $idWaktu = $_POST['idWaktu'];
             $idMapel = $_POST['idMapel'];
             
-            $result = mysqli_query($mysqli, "SELECT idWaktu, namaMapel, kelas FROM mapel WHERE idMapel='$idMapel'");
+            $result = mysqli_query($mysqli, "SELECT idWaktu, namaMapel, kelas FROM mapel WHERE kelas='$kelas' AND idWaktu='$idWaktu' AND namaMapel='$namaMapel'");
 
             if(mysqli_num_rows($result) != 0){
                 echo "<p class='text-danger'>Sudah ada jadwal yang sama.</p>";

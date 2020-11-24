@@ -69,7 +69,7 @@
                 }
             }
             
-            $result = mysqli_query($mysqli, "SELECT idMapel, namaMapel, kelas FROM mapel WHERE idMapel NOT IN (SELECT idMapel FROM peserta WHERE idPeserta = 'syahrizalfauzi')");
+            $result = mysqli_query($mysqli, "SELECT idMapel, namaMapel, kelas FROM mapel WHERE idMapel NOT IN (SELECT idMapel FROM peserta WHERE idPeserta = '$username')");
             if(mysqli_num_rows($result) != 0){
                 echo '<form action="jadwalpeserta_add.php" method="post">';
                 echo '<tr>';

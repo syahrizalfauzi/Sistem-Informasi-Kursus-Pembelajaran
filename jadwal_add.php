@@ -75,7 +75,7 @@
                 echo "<p class='text-danger'>Sudah ada jadwal yang sama.</p>";
             }
             else{
-                $result = mysqli_query($mysqli, "INSERT INTO waktu (hari,jam) VALUES('$hari','$jam')");
+                $result = mysqli_query($mysqli, "INSERT INTO mapel (namaMapel,kelas, idWaktu) VALUES('$namaMapel','$kelas', '$idWaktu')");
                 echo "<p class='text-success'>Jadwal berhasil ditambah.</p>";
                 echo "<a href='jadwal.php'>Kembali</a>";
             }

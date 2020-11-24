@@ -49,7 +49,7 @@
     <?php  
         include_once("config.php");
 
-        $result = mysqli_query($mysqli, "SELECT * FROM waktu");
+        $result = mysqli_query($mysqli, "SELECT * FROM waktu ORDER BY hari");
 
         while($dataWaktu = mysqli_fetch_array($result)) {         
             echo "<tr>";
