@@ -17,5 +17,7 @@ Aplikasi ini merupakan sistem informasi kursus pembelajaran.
 -Menambah, mengubah, & menghapus jadwal<br>
 -Malihat nama daftar peserta & username nya<br>
 -Mendaftarkan peserta baru<br>
+## ERD (Entity Relationship Diagram)
+![ERD](https://i.ibb.co/0nP75jc/ERD.jpg)
 ## Screenshot lembar asistensi
 ![Lembar asistensi TA](https://i.ibb.co/wQ7mCMw/Lembarasis.jpg)
