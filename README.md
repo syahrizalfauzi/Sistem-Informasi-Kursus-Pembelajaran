@@ -17,3 +17,5 @@ Aplikasi ini merupakan sistem informasi kursus pembelajaran.
 -Menambah, mengubah, & menghapus jadwal<br>
 -Malihat nama daftar peserta & username nya<br>
 -Mendaftarkan peserta baru<br>
+## Screenshot lembar asistensi
+![Lembar asistensi TA](https://drive.google.com/file/d/1P6ZB4wMMjtB0xmPl_ibcQ3R9TYNPAZNE/preview)
