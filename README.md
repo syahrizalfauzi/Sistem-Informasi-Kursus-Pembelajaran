@@ -18,6 +18,6 @@ Aplikasi ini merupakan sistem informasi kursus pembelajaran.
 -Malihat nama daftar peserta & username nya<br>
 -Mendaftarkan peserta baru<br>
 ## ERD (Entity Relationship Diagram)
-![ERD](https://i.ibb.co/0nP75jc/ERD.jpg)
+![ERD](https://raw.githubusercontent.com/syahrizalfauzi/Sistem-Informasi-Kursus-Pembelajaran/master/ERD.jpg)
 ## Screenshot lembar asistensi
-![Lembar asistensi TA](https://i.ibb.co/wQ7mCMw/Lembarasis.jpg)
+![Lembar asistensi TA](https://raw.githubusercontent.com/syahrizalfauzi/Sistem-Informasi-Kursus-Pembelajaran/master/Lembarasis.jpg)
