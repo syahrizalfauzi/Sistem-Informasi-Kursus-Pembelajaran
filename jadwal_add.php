@@ -69,13 +69,13 @@
             $kelas = $_POST['kelas'];
             $idWaktu = $_POST['idWaktu'];
             
-            $result = mysqli_query($mysqli, "SELECT namaMapel, kelas, idWaktu FROM mapel WHERE namaMapel='$namaMapel' AND kelas='$kelas' AND idWaktu='$idWaktu'");
+            $result = mysqli_query($mysqli, "SELECT namaMapel, kelas, idWaktu FROM mapel WHERE namaMapel='".$namaMapel."' AND kelas='".$kelas."' AND idWaktu='".$idWaktu."'");
             
             if(mysqli_num_rows($result) != 0){
                 echo "<p class='text-danger'>Sudah ada jadwal yang sama.</p>";
             }
             else{
-                $result = mysqli_query($mysqli, "INSERT INTO mapel (namaMapel,kelas, idWaktu) VALUES('$namaMapel','$kelas', '$idWaktu')");
+                $result = mysqli_query($mysqli, "INSERT INTO mapel (namaMapel,kelas, idWaktu) VALUES('".$namaMapel."','".$kelas."', '".$idWaktu."')");
                 echo "<p class='text-success'>Jadwal berhasil ditambah.</p>";
                 echo "<a href='jadwal.php'>Kembali</a>";
             }

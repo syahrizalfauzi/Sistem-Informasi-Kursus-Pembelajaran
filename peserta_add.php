@@ -64,13 +64,13 @@
         }
         else{
             include_once("config.php");
-            $result = mysqli_query($mysqli, "SELECT username FROM akun WHERE username='$username'");
+            $result = mysqli_query($mysqli, "SELECT username FROM akun WHERE username='".$username."'");
 
             if(mysqli_num_rows($result) != 0){
                 echo "<p class='text-danger'>Sudah ada peserta dengan username yang sama.</p>";
             }
             else{
-                $result = mysqli_query($mysqli, "INSERT INTO akun(username,nama,accessToken) VALUES('$username','$nama', MD5('$username|$password'))");
+                $result = mysqli_query($mysqli, "INSERT INTO akun(username,nama,accessToken) VALUES('".$username."','".$nama."', MD5('".$username."|".$password."'))");
                 echo "<p class='text-success'>Peserta berhasil ditambah.</p>";
                 echo "<a href='peserta.php'>Kembali</a>";
             }

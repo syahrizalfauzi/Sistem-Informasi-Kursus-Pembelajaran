@@ -4,7 +4,7 @@
 
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $result = mysqli_query($mysqli, "SELECT accessToken, nama FROM akun WHERE accessToken=MD5('$username|$password')");
+    $result = mysqli_query($mysqli, "SELECT accessToken, nama FROM akun WHERE accessToken=MD5('".$username."|".$password."')");
 
     //Gada user
     if(mysqli_num_rows($result) == 0){

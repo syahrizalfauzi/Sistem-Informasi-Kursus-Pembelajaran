@@ -72,7 +72,7 @@
 
             if(isset($_POST['goSearch'])){
                 $search = $_POST['search'];
-                $result = mysqli_query($mysqli, "SELECT * FROM jadwal WHERE namaMapel LIKE '%$search%' OR kelas LIKE '%$search%' OR hari LIKE '%$search' OR jam LIKE '%$search%'");
+                $result = mysqli_query($mysqli, "SELECT * FROM jadwal WHERE namaMapel LIKE '%".$search."%' OR kelas LIKE '%".$search."%' OR hari LIKE '%".$search."' OR jam LIKE '%".$search."%'");
             }
             else{
                 $result = mysqli_query($mysqli, "SELECT * FROM jadwal");

@@ -2,7 +2,7 @@
     include_once("config.php");
     $idMapel = $_GET['id'];
 
-    $result = mysqli_query($mysqli, "SELECT * FROM mapel WHERE idMapel=$idMapel");
+    $result = mysqli_query($mysqli, "SELECT * FROM mapel WHERE idMapel=".$idMapel);
 
     while($dataMapel = mysqli_fetch_array($result))
     {
@@ -46,9 +46,9 @@
 
     <form action="jadwal_edit.php?id=<?php echo $idMapel;?>" method="post" class="form-group">
         <label for="namaMapel">Nama Mata Pelajaran</label>
-        <input type="text" name="namaMapel" id="namaMapel" class="form-control" value=<?php echo $namaMapel;?>>
+        <input type="text" name="namaMapel" id="namaMapel" class="form-control" value="<?php echo $namaMapel;?>">
         <label for="kelas" >Kelas</label>
-        <input type="text" name="kelas" id="kelas" class="form-control" value=<?php echo $kelas;?>>
+        <input type="text" name="kelas" id="kelas" class="form-control" value="<?php echo $kelas;?>">
         <label for="waktu" >Waktu</label>
         <select name="idWaktu" id="waktu" class="btn btn-outline-secondary btn-block" value="<?php echo $idWaktu;?>">
             <?php
@@ -73,13 +73,13 @@
             $idWaktu = $_POST['idWaktu'];
             $idMapel = $_POST['idMapel'];
             
-            $result = mysqli_query($mysqli, "SELECT idWaktu, namaMapel, kelas FROM mapel WHERE kelas='$kelas' AND idWaktu='$idWaktu' AND namaMapel='$namaMapel'");
+            $result = mysqli_query($mysqli, "SELECT idWaktu, namaMapel, kelas FROM mapel WHERE kelas='".$kelas."' AND idWaktu='".$idWaktu."' AND namaMapel='".$namaMapel."'");
 
             if(mysqli_num_rows($result) != 0){
                 echo "<p class='text-danger'>Sudah ada jadwal yang sama.</p>";
             }
             else{
-                $result = mysqli_query($mysqli, "UPDATE mapel SET idWaktu='$idWaktu',namaMapel='$namaMapel',kelas='$kelas' WHERE idMapel=$idMapel");
+                $result = mysqli_query($mysqli, "UPDATE mapel SET idWaktu='".$idWaktu."',namaMapel='".$namaMapel."',kelas='".$kelas."' WHERE idMapel=".$idMapel);
                 header("Location: jadwal.php");
             }
         }

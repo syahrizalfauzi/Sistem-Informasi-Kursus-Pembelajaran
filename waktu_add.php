@@ -58,13 +58,13 @@
             }
             else{
                 include_once("config.php");
-                $result = mysqli_query($mysqli, "SELECT hari, jam FROM waktu WHERE hari='$hari' AND jam='$jam'");
+                $result = mysqli_query($mysqli, "SELECT hari, jam FROM waktu WHERE hari='".$hari."' AND jam='".$jam."'");
 
                 if(mysqli_num_rows($result) != 0){
                     echo "<p class='text-danger'>Waktu sudah ada.</p>";
                 }
                 else{
-                    $result = mysqli_query($mysqli, "INSERT INTO waktu (hari,jam) VALUES('$hari','$jam')");
+                    $result = mysqli_query($mysqli, "INSERT INTO waktu (hari,jam) VALUES('".$hari."','".$jam."')");
                     echo "<p class='text-success'>Waktu berhasil ditambah.</p>";
                     echo "<a href='waktu.php'>Kembali</a>";
                 }

@@ -1,6 +1,12 @@
 <?php  
     include_once("config.php");
     session_start();
+    if(isset($_SESSION['username'])){
+        if($_SESSION['username'] == 'admin')
+            header('Location: dashboard_admin.php');
+    }else{
+        header('Location: index.php');
+    }
     $username = $_SESSION['username'];
     $nama = $_SESSION['nama'];
 ?>

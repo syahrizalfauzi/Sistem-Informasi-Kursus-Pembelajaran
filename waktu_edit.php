@@ -2,7 +2,7 @@
     include_once("config.php");
     $idWaktu = $_GET['id'];
 
-    $result = mysqli_query($mysqli, "SELECT * FROM waktu WHERE idWaktu=$idWaktu");
+    $result = mysqli_query($mysqli, "SELECT * FROM waktu WHERE idWaktu=".$idWaktu);
 
     while($dataWaktu = mysqli_fetch_array($result))
     {
@@ -45,9 +45,9 @@
 
     <form action="waktu_edit.php?id=<?php echo $idWaktu ?>" method="post" class="form-group">
         <label for="hari">Hari</label>
-        <input type="text" name="hari" id="hari" class="form-control" value=<?php echo $hari;?>>
+        <input type="text" name="hari" id="hari" class="form-control" value="<?php echo $hari;?>">
         <label for="jam">Jam</label>
-        <input type="time" name="jam" id="jam" class="form-control" value=<?php echo $jam;?>>
+        <input type="time" name="jam" id="jam" class="form-control" value="<?php echo $jam;?>">
         <input type="hidden" name="idWaktu" value=<?php echo $_GET['id'];?>>
         <input type="submit" name="submit" value="Ubah" class="btn btn-primary float-right mt-3">
     </form>
@@ -57,13 +57,13 @@
             $idWaktu = $_POST['idWaktu'];
             $hari=$_POST['hari'];
             $jam=$_POST['jam'];
-            $result = mysqli_query($mysqli, "SELECT hari, jam FROM waktu WHERE hari='$hari' AND jam='$jam'");
+            $result = mysqli_query($mysqli, "SELECT hari, jam FROM waktu WHERE hari='".$hari."' AND jam='".$jam."'");
 
             if(mysqli_num_rows($result) != 0){
                 echo "<p class='text-danger'>Waktu sudah ada.</p>";
             }
             else{
-                $result = mysqli_query($mysqli, "UPDATE waktu SET hari='$hari',jam='$jam' WHERE idWaktu=$idWaktu");
+                $result = mysqli_query($mysqli, "UPDATE waktu SET hari='".$hari."',jam='".$jam."' WHERE idWaktu=".$idWaktu);
                 header("Location: waktu.php");
             }
         }

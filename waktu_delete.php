@@ -3,7 +3,7 @@
 
     $idWaktu = $_GET['id'];
 
-    $result = mysqli_query($mysqli, "DELETE FROM waktu WHERE idWaktu=$idWaktu");
+    $result = mysqli_query($mysqli, "DELETE FROM waktu WHERE idWaktu=".$idWaktu);
 
     header("Location:waktu.php");
 ?>
