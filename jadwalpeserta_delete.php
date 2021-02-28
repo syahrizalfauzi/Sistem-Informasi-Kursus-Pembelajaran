@@ -8,4 +8,3 @@
     $result = mysqli_query($mysqli, "DELETE FROM peserta WHERE id=".$id);
 
     header("Location:dashboard.php");
-?>

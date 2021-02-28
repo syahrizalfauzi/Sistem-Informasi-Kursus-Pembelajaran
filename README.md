@@ -19,5 +19,7 @@ Aplikasi ini merupakan sistem informasi kursus pembelajaran.
 -Mendaftarkan peserta baru<br>
 ## ERD (Entity Relationship Diagram)
 ![ERD](https://raw.githubusercontent.com/syahrizalfauzi/Sistem-Informasi-Kursus-Pembelajaran/master/ERD.jpg)
+[View] : <br>
+jadwal (inner join mapel & waktu )= mapel[idMapel], mapel[namaMapel], mapel[kelas], waktu[hari], waktu[jam]
 ## Screenshot lembar asistensi
 ![Lembar asistensi TA](https://raw.githubusercontent.com/syahrizalfauzi/Sistem-Informasi-Kursus-Pembelajaran/master/Lembarasis.jpg)

@@ -13,4 +13,3 @@
         header("Location:jadwal.php");
     else
         header("Location:dashboard.php");
-?>
